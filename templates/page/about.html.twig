@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}About{% endblock %}
+
+{% block body %}
+ <h1>About</h1>
+ <h2>
+    The price is:{{ price}} </h2>
+     {% if price>= 100 %}
+      This expensive
+      {% else %}
+       Its cheep
+       {% endif %}
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home
+{% endblock %}
+
+{% block body %}
+	<h1>Home</h1>
+	<img src="{{ asset('images/google-logo.png')}}" alt="Google Logo">
+
+
+	<h2>The Age Is:
+		{{ age }}</h2>
+	{% if age>=18 %}
+		<h3>you are allowed</h3>
+	{% else %}
+		<h3>you are not allowes</h3>
+	{% endif %}
+	{% if countries %}
+		<h2>countries:</h2>
+		<ul>
+			{% for country in countries %}
+			<li>{{ country }}</li>
+			{% endfor %}
+		</ul>
+		{% endif %}
+		
+	{% endblock %}
